@@ -17,9 +17,18 @@
 
     <div class="margin-mv">
         <p>Tag People</p>
-        <div id="tagged_container" class="padding-mh">
-           <p class="tag">tag1  X </p>
-           <p class="tag">tag2  X </p> 
+        <div id="tagged_container" class="padding-mh padding-mv margin-mv">
+            <div class="taggables" *ngFor="let taggable of tagged">
+                <span>{{ taggable }}</span>
+                <span> ✕</span>
+            </div>
+        </div>
+
+        <div id="taggables_container" class="padding-mv">
+            <div class="taggables" *ngFor="let taggable of taggables">
+                <span>{{ taggable }}</span>
+                <span> ✕</span>
+            </div>
         </div>
     </div>
 

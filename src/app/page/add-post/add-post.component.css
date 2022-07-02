@@ -17,6 +17,16 @@
 #tagged_container{
     border-radius: 8px;
     border: 2px solid black ;
+
+    display: flex;
+    flex-direction: row;
+}
+.taggables{
+    border-radius: 4px;
+    padding: 6px;
+    margin: 6px;
+    background: rgb(192, 198, 198);
+    display: inline;
 }
 
 #submit_btn{
