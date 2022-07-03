@@ -37,6 +37,10 @@
     display: inline-block;
 }
 
+.margin-sv{
+    margin-top: 6px;
+    margin-bottom: 6px;
+}
 .margin-mv{
     margin-top: 12px;
     margin-bottom: 12px;
@@ -46,6 +50,10 @@
     margin-bottom: 24px;
 }
 
+.padding-sv{
+    padding-top: 6px;
+    padding-bottom: 6px;
+}
 .padding-mv{
     padding-top: 12px;
     padding-bottom: 12px;

@@ -7,7 +7,7 @@
         ></mat-slide-toggle>
     </div>
 
-    <textarea id="text_post_content">
+    <textarea id="text_post_content" class="padding-sv padding-mh" placeholder="This post is about...">
 
     </textarea>
 
@@ -17,7 +17,7 @@
 
     <div class="margin-mv">
         <p>Tag People</p>
-        <div id="tagged_container" class="padding-mh padding-mv margin-mv">
+        <div id="tagged_container" class="padding-mh padding-sv margin-mv">
             <div class="taggables" *ngFor="let taggable of tagged">
                 <span>{{ taggable }}</span>
                 <span> ✕</span>

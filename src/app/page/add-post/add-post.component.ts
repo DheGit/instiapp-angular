@@ -16,7 +16,7 @@ export class AddPostComponent implements OnInit {
   ) { }
 
   ngOnInit(): void {
-    this.dataService.setTitle("Add new post")
+    this.dataService.setTitle("Create post")
     this.populateDummyData();
   }
 
