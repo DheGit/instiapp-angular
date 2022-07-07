@@ -17,18 +17,6 @@ export class AddPostComponent implements OnInit {
 
   ngOnInit(): void {
     this.dataService.setTitle("Create post")
-    this.populateDummyData();
-  }
-
-  populateDummyData(): void{
-    this.taggables = new Array<String>();
-    this.tagged = new Array<String>();
-
-    this.taggables.push("ISHA");
-    this.taggables.push("GSCA");
-    this.taggables.push("EESA");
-
-    this.tagged.push("DevCom");
   }
 
 }

@@ -1,36 +1,74 @@
 <div id="main_container">
-    <h1>Add Post</h1>
+    <h1 style="text-align:center;">Create Post</h1>
     <div class="margin-mv">
         Post Anonymously
         <mat-slide-toggle
         id="anon_toggle"
         ></mat-slide-toggle>
     </div>
-
-    <textarea id="text_post_content" class="padding-sv padding-mh" placeholder="This post is about...">
-
-    </textarea>
+    
+    <div id="container"></div>
+ <textarea id="text_post_content" class="padding-sv padding-mh" placeholder="Write your post ..."></textarea>
+    
 
     <div id="container_add_images" class="margin-mv padding-mv center-text">
         <p>+ Add Images</p>
     </div>
 
-    <div class="margin-mv">
-        <p>Tag People</p>
-        <div id="tagged_container" class="padding-mh padding-sv margin-mv">
-            <div class="taggables" *ngFor="let taggable of tagged">
-                <span>{{ taggable }}</span>
-                <span> ✕</span>
-            </div>
-        </div>
-
-        <div id="taggables_container" class="padding-mv">
-            <div class="taggables" *ngFor="let taggable of taggables">
-                <span>{{ taggable }}</span>
-                <span> ✕</span>
-            </div>
-        </div>
+    <div id="container" class="padding-mh padding-sv margin-mv center-text">
+            <p>Tags</p>
+            <div id="searchbox">
+                <button mat-icon-button
+                    color="primary"
+                    style="max-height:37px;">
+                    <mat-icon>search</mat-icon>
+                 </button>
+            
+                  <mat-form-field class="searchinput">
+                      <input matInput type="search"
+                              name="search"
+                              placeholder="Search People or Institue Bodies">
+                  </mat-form-field>
+        </div>          
     </div>
+
+    <div id="container" class="margin-mv padding-mv center-text">
+        <p>Location</p>
+        <div id="searchbox">
+          <button mat-icon-button
+              color="primary"
+              style="max-height:37px;">
+              <mat-icon>search</mat-icon>
+           </button>
+      
+            <mat-form-field class="searchinput">
+                <input matInput type="search"
+                        name="search"
+                        placeholder="Search location around Campus">
+            </mat-form-field>
+       </div>
+          
+    </div>
+    
+
+    <div id="container" class="margin-mv padding-mv center-text">
+        <p>Interests</p>
+        <div id="searchbox">
+            <button mat-icon-button
+                    color="primary"
+                    style="max-height:37px;">
+                <mat-icon>search</mat-icon>
+            </button>
+            <mat-form-field class="searchinput">
+                <input matInput type="search"
+                        name="search"
+                        placeholder="Search for an Interest">
+            </mat-form-field>
+          
+            
+        </div>        
+    </div>
+
 
     <div class="center-text">
         <button
@@ -39,7 +77,7 @@
             color="accent"
             id="submit_btn"
         >
-            Submit
+            Post
         </button>
     </div>
 </div>
