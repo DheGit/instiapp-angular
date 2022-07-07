@@ -1,3 +1,23 @@
+.head-card {
+    height: 34px;
+    margin-top: -10px;
+    padding: 16px;
+    display: flex;
+}
+.profile-pic {
+    width: 40px;
+    height: 40px;
+    margin-right: 10px;
+    margin-top: -3px;
+    flex: 0 0 40px;
+}
+
+#ldap {
+    color: #eee;
+    font-size: 10pt;
+}
+
+
 #searchbox {
     margin: 10px;
     white-space: nowrap;
@@ -26,7 +46,8 @@
 #container{
     border-radius: 8px;
     border: 2px solid black ;
-   
+    display: flex;
+    flex-direction: row;
 }
 .taggables{
     border-radius: 4px;

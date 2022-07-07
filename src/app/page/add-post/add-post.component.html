@@ -6,8 +6,16 @@
         id="anon_toggle"
         ></mat-slide-toggle>
     </div>
-    
-    <div id="container"></div>
+
+        <div class="head-card" >
+            <img class="profile-pic img-circle object-cover"
+                 [src]="profilePic"
+                 src-fallback="assets/useravatar.svg">
+            <div class="overflow-ellipsis">
+                {{ userName }}
+                <div id="ldap">{{ ldap }}</div>
+            </div>
+        </div>
  <textarea id="text_post_content" class="padding-sv padding-mh" placeholder="Write your post ..."></textarea>
     
 
