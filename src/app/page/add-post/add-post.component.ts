@@ -14,12 +14,27 @@ export class AddPostComponent implements OnInit {
   public userName = DEFAULT_USERNAME;
   public ldap = DEFAULT_LDAP;
   public profilePic = DEFAULT_PROFILE_PIC;
+  content_border = 'none';
+
+  taggables: String[];
+  
   constructor(
     public dataService: DataService,
   ) { }
 
   ngOnInit(): void {
     this.dataService.setTitle("Create post")
+    this.populateDummyData();
+  }
+
+  populateDummyData(): void{
+    this.taggables = new Array<String>();
+
+    this.taggables.push("ISHA");
+    this.taggables.push("GSCA");
+    this.taggables.push("EESA");
+    this.taggables.push("DevCom");
+
   }
 
 }

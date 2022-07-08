@@ -24,7 +24,7 @@
 }
 
 .searchinput {
-    min-width: 80%;
+    min-width: 60%;
 }
 
 #main_container{
@@ -32,33 +32,61 @@
     height:100%;
 }
 
-#text_post_content{
+#post_container{
     border-radius: 8px;
+    border: 2px solid black;
     width:100%;
-    min-height: 144px;
+    min-height: 250px;
 }
 
-#container_add_images{
-    border: dashed 2px gray;
-    border-radius: 16px;
+.grid-container {
+    display: grid;
+    grid-template-columns: 1fr 7fr;
+    grid-gap: 20px;
+    
+}
+
+.grid-container_location {
+    display: grid;
+    grid-template-columns: 1fr 6fr 1fr;
+    grid-gap: 20px;
+    
 }
 
 #container{
     border-radius: 8px;
-    border: 2px solid black ;
-    display: flex;
-    flex-direction: row;
+    border: 2px solid black;
+    height: auto;
+    margin: 6px;
+
 }
-.taggables{
-    border-radius: 4px;
+
+#hidden-container{
+    border:none ;
     padding: 6px;
     margin: 6px;
-    background: rgb(192, 198, 198);
+}
+
+.taggables{
+    border-radius: 20px;
+    padding: 6px;
+    margin: 6px;
+    background:transparent;
     display: inline;
+    border: 2px solid gray ;
 }
 
 #submit_btn{
-    width:40%;
+    width:100px;
+    background-color:#0D4BA8;
+    border-radius: 20px;
+    color: white;
+    margin: 10px;
+}
+#link_btn{
+    width: 0px;
+    margin:1px;
+    background-color:gray;
 }
 
 .tag{

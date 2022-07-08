@@ -1,31 +1,32 @@
 <div id="main_container">
     <h1 style="text-align:center;">Create Post</h1>
-    <div class="margin-mv">
-        Post Anonymously
-        <mat-slide-toggle
-        id="anon_toggle"
-        ></mat-slide-toggle>
+    
+    <div id="post_container">       
+         <div class="head-card" >
+             <img class="profile-pic img-circle object-cover"
+                  [src]="profilePic"
+                  src-fallback="assets/useravatar.svg">
+             <div class="overflow-ellipsis">
+                 {{ userName }}
+                 <div id="ldap">{{ ldap }}</div>
+             </div>
+         </div>
+         <textarea style="width:95%;min-height: 180px; border:none; display:block; margin-left:auto; margin-right:auto;" 
+         name="text" oninput='this.style.height = "";this.style.height = this.scrollHeight + "px"' 
+         placeholder="Write your post ..."></textarea>
     </div>
 
-        <div class="head-card" >
-            <img class="profile-pic img-circle object-cover"
-                 [src]="profilePic"
-                 src-fallback="assets/useravatar.svg">
-            <div class="overflow-ellipsis">
-                {{ userName }}
-                <div id="ldap">{{ ldap }}</div>
-            </div>
-        </div>
- <textarea id="text_post_content" class="padding-sv padding-mh" placeholder="Write your post ..."></textarea>
-    
-
-    <div id="container_add_images" class="margin-mv padding-mv center-text">
+    <div id="container" class="margin-mv padding-mv center-text">
         <p>+ Add Images</p>
     </div>
 
-    <div id="container" class="padding-mh padding-sv margin-mv center-text">
-            <p>Tags</p>
-            <div id="searchbox">
+    <div id="container">
+     <div id="hidden-container" class="grid-container">
+           <div class="grid-child" style="padding:5px; text-align:center" >
+             <h2>Tags</h2>
+           </div>
+            <div id="searchbox" class="grid-child" >
+               
                 <button mat-icon-button
                     color="primary"
                     style="max-height:37px;">
@@ -37,12 +38,20 @@
                               name="search"
                               placeholder="Search People or Institue Bodies">
                   </mat-form-field>
-        </div>          
-    </div>
+            </div>  
+                  
+        </div>
+        <div id="hidden-container" class="padding-mv">
+          <div class="taggables" *ngFor="let taggable of taggables">
+              <span>{{ taggable }}</span>
+              <span> ✕</span>
+          </div>
+        </div>
+    </div>      
 
-    <div id="container" class="margin-mv padding-mv center-text">
-        <p>Location</p>
-        <div id="searchbox">
+    <div id="container" class="grid-container_location">
+        <div class="grid-child" style="padding:5px; text-align:center" ><h2>Location</h2></div>               
+        <div id="searchbox" class="grid-child">
           <button mat-icon-button
               color="primary"
               style="max-height:37px;">
@@ -55,13 +64,14 @@
                         placeholder="Search location around Campus">
             </mat-form-field>
        </div>
+       <div class="grid-child" style="padding:5px; text-align:center; color:blue;" ><h3>Use Maps</h3></div>
           
     </div>
     
 
-    <div id="container" class="margin-mv padding-mv center-text">
-        <p>Interests</p>
-        <div id="searchbox">
+    <div id="container" class="grid-container">
+        <div class="grid-child" style="padding:5px; text-align:center" ><h2>Interests</h2></div>              
+        <div id="searchbox" class="grid-child">
             <button mat-icon-button
                     color="primary"
                     style="max-height:37px;">
@@ -78,14 +88,24 @@
     </div>
 
 
-    <div class="center-text">
+    <div class="left-text">
         <button
             mat-raised-button
             class="margin-mv"
-            color="accent"
-            id="submit_btn"
-        >
+            id="submit_btn">
             Post
+        </button>
+        <button
+          mat-raised-button
+          class="margin-mv"
+          id="link_btn">
+          <mat-icon>attach_file</mat-icon>
+        </button>
+        <button
+          mat-raised-button
+          class="margin-mv"
+          id="link_btn">
+          <mat-icon>link</mat-icon>
         </button>
     </div>
 </div>
