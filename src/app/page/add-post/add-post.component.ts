@@ -1,5 +1,8 @@
 import { Component, OnInit } from '@angular/core';
 import { DataService } from '../../data.service';
+import { MatDialogRef } from '@angular/material/dialog';
+import { MatDialog, MatDialogConfig, } from "@angular/material/dialog";
+import { ClosePopupComponent } from './close-popup/close-popup.component';
 
 const DEFAULT_USERNAME = 'Guest';
 const DEFAULT_LDAP = 'IITB User';
@@ -20,6 +23,8 @@ export class AddPostComponent implements OnInit {
   
   constructor(
     public dataService: DataService,
+    private dialog : MatDialog,
+    public dialogRef : MatDialogRef<AddPostComponent>,
   ) { }
 
   ngOnInit(): void {
@@ -35,6 +40,18 @@ export class AddPostComponent implements OnInit {
     this.taggables.push("EESA");
     this.taggables.push("DevCom");
 
+  }
+
+  onPost(){
+    this.dialogRef.close();
+    
+    const dialogConfig = new MatDialogConfig();
+    dialogConfig.autoFocus = false;
+    dialogConfig.width = "30%";
+    dialogConfig.height = "20%";
+    dialogConfig.position = {top:'200px' };
+    dialogConfig.panelClass= 'custom-container';
+    this.dialog.open(ClosePopupComponent, dialogConfig);
   }
 
 }

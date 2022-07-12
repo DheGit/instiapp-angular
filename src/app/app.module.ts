@@ -81,6 +81,8 @@ import { DiscussionsComponent } from './page/discussions/discussions.component';
 import { GroupCardComponent } from './card/group-card/group-card.component';
 import { PostComponent } from './card/post/post.component';
 import { AddPostComponent } from './page/add-post/add-post.component';
+import { TestPageComponent } from './page/test-page/test-page.component';
+import { ClosePopupComponent } from './page/add-post/close-popup/close-popup.component';
 
 @NgModule({
   declarations: [
@@ -131,6 +133,8 @@ import { AddPostComponent } from './page/add-post/add-post.component';
     DiscussionsComponent,
     PostComponent,
     AddPostComponent,
+    TestPageComponent,
+    ClosePopupComponent,
   ],
   imports: [
     BrowserModule,
@@ -179,6 +183,7 @@ import { AddPostComponent } from './page/add-post/add-post.component';
 
       { path: 'discussions', component: DiscussionsComponent, data: {state: 'base'}},
       { path: 'add-post', component: AddPostComponent, data: {state: 'base'}},
+      { path: 'test-page', component: TestPageComponent, data: {state: 'base'}},
 
       { path: 'blog/:blog', component: BlogComponent, data: { state: 'base' }, canActivate: [LoginActivate] },
       { path: 'login', component: LoginComponent, data: { state: 'base' } },
@@ -194,7 +199,8 @@ import { AddPostComponent } from './page/add-post/add-post.component';
     LayoutModule,
   ],
   entryComponents: [
-    NotifyCardComponent
+    NotifyCardComponent,
+    AddPostComponent,
   ],
   providers: [
     DataService,

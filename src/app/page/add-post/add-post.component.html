@@ -1,4 +1,4 @@
-<div id="main_container">
+
     <h1 style="text-align:center;">Create Post</h1>
     
     <div id="post_container">       
@@ -11,13 +11,13 @@
                  <div id="ldap">{{ ldap }}</div>
              </div>
          </div>
-         <textarea style="width:95%;min-height: 180px; border:none; display:block; margin-left:auto; margin-right:auto;" 
+         <textarea style="width:95%;min-height: 80px; border:none; display:block; margin-left:auto; margin-right:auto;" 
          name="text" oninput='this.style.height = "";this.style.height = this.scrollHeight + "px"' 
          placeholder="Write your post ..."></textarea>
     </div>
 
-    <div id="container" class="margin-mv padding-mv center-text">
-        <p>+ Add Images</p>
+    <div id="container" class="margin-sv padding-sv center-text">
+        <p>Added Images</p>
     </div>
 
     <div id="container">
@@ -41,7 +41,7 @@
             </div>  
                   
         </div>
-        <div id="hidden-container" class="padding-mv">
+        <div id="hidden-container" class="padding-sv">
           <div class="taggables" *ngFor="let taggable of taggables">
               <span>{{ taggable }}</span>
               <span> ✕</span>
@@ -86,26 +86,28 @@
             
         </div>        
     </div>
+    
 
-
-    <div class="left-text">
+    <mat-dialog-actions>
+    <div class="bottom_button">
         <button
             mat-raised-button
-            class="margin-mv"
-            id="submit_btn">
+            class="margin-sv"
+            id="submit_btn" 
+            (click)="onPost()">
             Post
         </button>
         <button
-          mat-raised-button
-          class="margin-mv"
+          mat-button
+          class="margin-sv"
           id="link_btn">
           <mat-icon>attach_file</mat-icon>
         </button>
         <button
           mat-raised-button
-          class="margin-mv"
+          class="margin-sv"
           id="link_btn">
           <mat-icon>link</mat-icon>
         </button>
     </div>
-</div>
+</mat-dialog-actions>
